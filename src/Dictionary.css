@@ -1,0 +1,31 @@
+.Dictionary .container {
+  max-width: 600px;
+  text-align: center;
+}
+
+.Dictionary h1 {
+  color: #313130;
+  margin: 30px;
+}
+
+.Dictionary form {
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.Dictionary .form-control:focus {
+  border-color: #cfdac8;
+  box-shadow: 0 0 8px #cfdac8;
+}
+
+.Dictionary #search-button {
+  background-color: #cfdac8;
+  border: 1px solid #7c9473;
+  padding: 6px 35px;
+}
+
+.Dictionary #search-button:focus {
+  border: 1px solid #7c9473;
+  box-shadow: 0 0 8px #cfdac8;
+}

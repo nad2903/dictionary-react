@@ -1,0 +1,13 @@
+.App footer {
+  margin: 15px;
+  text-align: center;
+}
+
+.App a {
+  color: #61745a;
+  font-weight: 500;
+}
+
+.App a:hover {
+  color: #61745a;
+}
