@@ -13,15 +13,15 @@ export default function Dictionary() {
   function handleSubmit(event) {
     event.preventDefault();
     
+    // documentation: https://dictionaryapi.dev
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchedWord}`;
-
     axios.get(apiUrl).then(search);
-
   }
 
   function updateSearch(event) {
     setSearchedWord(event.target.value);
   }
+  
     return (
       <div className="Dictionary">
         <div className="container">
