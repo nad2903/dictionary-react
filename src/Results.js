@@ -6,6 +6,8 @@ export default function Results(props) {
     return (
       <div className="Results">
         <h2>{props.searchData.word}</h2>
+        {props.searchData.phonetics[0].text}
+        {" "}<a href={props.searchData.phonetics[0].audio} target="_blank" rel="noreferrer">listen</a>
         {props.searchData.meanings.map(function(meaning, index) {
           return (
             <div key={index}>
