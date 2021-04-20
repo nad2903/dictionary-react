@@ -1,15 +1,21 @@
 import React, { useState }from "react";
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
 import "./Dictionary.css";
 
 export default function Dictionary() {
 
   let [searchedWord, setSearchedWord] = useState(null);
   let [searchResult, setSearchResult] = useState(null);
+  let [photos, setPhotos] = useState(null);
 
   function search(response) {
     setSearchResult(response.data[0]);
+  }
+
+  function pexelsSearch(response) {
+    setPhotos(response.data.photos);
   }
 
   function handleSubmit(event) {
@@ -18,6 +24,11 @@ export default function Dictionary() {
     // documentation: https://dictionaryapi.dev
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchedWord}`;
     axios.get(apiUrl).then(search);
+
+    let pexelsApiKey = "563492ad6f91700001000001f32e8e83944840f59facfd8d1fb927c5";
+    let pexelsUrl = `https://api.pexels.com/v1/search?query=${searchedWord}&per_page=2`;
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios.get(pexelsUrl, {headers: headers}).then(pexelsSearch);
   }
 
   function updateSearch(event) {
@@ -52,6 +63,7 @@ export default function Dictionary() {
           </form>
           <span className="search-results">
             <Results searchData={searchResult}/>
+            <Photos photoData={photos} />
           </span>
         </div>
       </div>
