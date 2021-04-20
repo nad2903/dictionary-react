@@ -4,13 +4,15 @@
 }
 
 .Dictionary h1 {
-  color: #313130;
   margin: 30px;
+}
+
+.Dictionary h2 {
+  margin: 10px 0px 20px;
 }
 
 .Dictionary form {
   display: block;
-  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -19,10 +21,14 @@
   box-shadow: 0 0 8px #cfdac8;
 }
 
+.Dictionary .search-results {
+  text-align: left;
+}
+
 .Dictionary #search-button {
   background-color: #cfdac8;
   border: 1px solid #7c9473;
-  padding: 6px 35px;
+  padding: 6px 45px;
 }
 
 .Dictionary #search-button:focus {
