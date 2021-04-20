@@ -11,9 +11,17 @@
   margin: 10px 0px 20px;
 }
 
+.Dictionary h4 {
+  margin: 20px 0px 8px;
+}
+
 .Dictionary form {
   display: block;
   margin: 0 auto;
+}
+
+.Dictionary .example {
+  margin: 10px 0px;
 }
 
 .Dictionary .form-control:focus {
